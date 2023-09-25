@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecordDatailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/reg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profileIv"
+                android:padding="5dp"
+                android:elevation="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="15dp"
+                    app:cardCornerRadius="30dp"
+                    android:id="@+id/cardview"
+                    app:cardBackgroundColor="@color/dark_blue"
+                    android:layout_marginTop="75dp">
+                    <LinearLayout
+                        android:id="@+id/line1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginTop="60dp"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="PERSONAL INFORMATION"
+                            android:textStyle="bold"
+                            android:textColor="@color/purple_500"
+                            android:layout_gravity="center"/>
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:elevation="15dp"
+                            android:stretchColumns="2">
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+                                    android:text="Name"
+                                    android:textSize="15dp"
+                                    android:textColor="@color/gray"
+                                    android:textStyle="italic" />
+                                <TextView
+                                    android:id="@+id/nameTv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Name"
+                                    android:textColor="@color/white"
+                                    android:layout_weight="1"
+                                    android:padding="5dp"
+                                    android:textStyle="bold"/>
+                            </TableRow>
+
+                            <TableRow>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Phone no."
+                                    android:textSize="15dp"
+                                    android:textColor="@color/gray"
+                                    android:textStyle="italic"
+                                    android:padding="5dp"/>
+                                <TextView
+                                    android:id="@+id/phoneTv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="contact number"
+                                    android:textColor="@color/white"
+                                    android:layout_weight="1"
+                                    android:padding="5dp"
+                                    android:textStyle="bold"/>
+                            </TableRow>
+                            <TableRow>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Address"
+                                    android:textSize="15dp"
+                                    android:textColor="@color/gray"
+                                    android:textStyle="italic"
+                                    android:padding="5dp"/>
+                                <TextView
+                                    android:id="@+id/addressTv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="address"
+                                    android:textColor="@color/white"
+                                    android:layout_weight="1"
+                                    android:padding="5dp"
+                                    android:textStyle="bold"/>
+                            </TableRow>
+                            <TableRow>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Age"
+                                    android:textSize="15dp"
+                                    android:textColor="@color/gray"
+                                    android:textStyle="italic"
+                                    android:padding="5dp"/>
+                                <TextView
+                                    android:id="@+id/dobTv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="age"
+                                    android:textColor="@color/white"
+                                    android:layout_weight="1"
+                                    android:padding="5dp"
+                                    android:textStyle="bold"/>
+                            </TableRow>
+                            <TableRow>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Date of Birth"
+                                    android:textSize="15dp"
+                                    android:textColor="@color/gray"
+                                    android:textStyle="italic"
+                                    android:padding="5dp"/>
+                                <TextView
+                                    android:id="@+id/ageTv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="birth date"
+                                    android:textColor="@color/white"
+                                    android:layout_weight="1"
+                                    android:padding="5dp"
+                                    android:textStyle="bold"/>
+                            </TableRow>
+                            <TableRow>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Gender"
+                                    android:textSize="15dp"
+                                    android:textColor="@color/gray"
+                                    android:textStyle="italic"
+                                    android:padding="5dp"/>
+                                <TextView
+                                    android:id="@+id/categoryTv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="gender"
+                                    android:textColor="@color/white"
+                                    android:layout_weight="1"
+                                    android:padding="5dp"
+                                    android:textStyle="bold"/>
+                            </TableRow>
+                            <TableRow>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Guardian"
+                                    android:textSize="15dp"
+                                    android:textColor="@color/gray"
+                                    android:textStyle="italic"
+                                    android:padding="5dp"/>
+                                <TextView
+                                    android:id="@+id/guardianTv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="if below 10 yrs old"
+                                    android:textColor="@color/white"
+                                    android:layout_weight="1"
+                                    android:padding="5dp"
+                                    android:textStyle="bold"/>
+                            </TableRow>
+                            <TableRow>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Added Time"
+                                    android:textSize="15dp"
+                                    android:textColor="@color/gray"
+                                    android:textStyle="italic"
+                                    android:padding="5dp"/>
+                                <TextView
+                                    android:id="@+id/addedTimeTv"
+                                    android:layout_width="40dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="added time"
+                                    android:textColor="@color/white"
+                                    android:layout_weight="1"
+                                    android:padding="5dp" />
+                            </TableRow>
+                            <TableRow>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Updated Time"
+                                    android:textSize="15dp"
+                                    android:textColor="@color/gray"
+                                    android:textStyle="italic"
+                                    android:padding="5dp"/>
+                                <TextView
+                                    android:id="@+id/updatedTimeTv"
+                                    android:layout_width="40dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="updated time"
+                                    android:textColor="@color/white"
+                                    android:layout_weight="1"
+                                    android:padding="5dp"/>
+                            </TableRow>
+
+                        </TableLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="VACCINE"
+                            android:textStyle="bold"
+                            android:textColor="@color/purple_500"
+                            android:layout_gravity="center"/>
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:elevation="15dp"
+                            android:stretchColumns="2">
+
+                            <TableRow>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Vaccine Manu."
+                                    android:textSize="15dp"
+                                    android:textColor="@color/gray"
+                                    android:textStyle="italic"
+                                    android:padding="5dp"/>
+                                <TextView
+                                    android:id="@+id/vaccineManufacturerTv"
+                                    android:layout_width="40dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="30dp"
+                                    android:text="vaccine manu"
+                                    android:textColor="@color/white"
+                                    android:layout_weight="1"
+                                    android:padding="5dp"
+                                    android:textStyle="bold"/>
+                            </TableRow>
+                            <TableRow>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Vaccine Shot."
+                                    android:textSize="15dp"
+                                    android:textColor="@color/gray"
+                                    android:textStyle="italic"
+                                    android:padding="5dp"/>
+                                <TextView
+                                    android:id="@+id/vaccineShotTV"
+                                    android:layout_width="40dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="30dp"
+                                    android:text="vaccine shot"
+                                    android:textColor="@color/white"
+                                    android:layout_weight="1"
+                                    android:padding="5dp"
+                                    android:textStyle="bold"/>
+                            </TableRow>
+                            <TableRow>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Date"
+                                    android:textSize="15dp"
+                                    android:textColor="@color/gray"
+                                    android:textStyle="italic"
+                                    android:padding="5dp"/>
+                                <TextView
+                                    android:id="@+id/vaccineDateTV"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="30dp"
+                                    android:text="vaccine date"
+                                    android:textColor="@color/white"
+                                    android:layout_weight="1"
+                                    android:padding="5dp"
+                                    android:textStyle="bold"/>
+                            </TableRow>
+
+                        </TableLayout>
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:elevation="15dp"
+                            android:stretchColumns="2">
+
+                            <TableRow>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Vaccine Manu."
+                                    android:textSize="15dp"
+                                    android:textColor="@color/gray"
+                                    android:textStyle="italic"
+                                    android:padding="5dp"/>
+                                <TextView
+                                    android:id="@+id/vaccineManufacturerTv1"
+                                    android:layout_width="40dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="30dp"
+                                    android:text="vaccine manu"
+                                    android:textColor="@color/white"
+                                    android:layout_weight="1"
+                                    android:padding="5dp"
+                                    android:textStyle="bold"/>
+                            </TableRow>
+                            <TableRow>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Vaccine Shot."
+                                    android:textSize="15dp"
+                                    android:textColor="@color/gray"
+                                    android:textStyle="italic"
+                                    android:padding="5dp"/>
+                                <TextView
+                                    android:id="@+id/vaccineShotTV1"
+                                    android:layout_width="40dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="30dp"
+                                    android:text="vaccine shot"
+                                    android:textColor="@color/white"
+                                    android:layout_weight="1"
+                                    android:padding="5dp"
+                                    android:textStyle="bold"/>
+                            </TableRow>
+                            <TableRow>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Date"
+                                    android:textSize="15dp"
+                                    android:textColor="@color/gray"
+                                    android:textStyle="italic"
+                                    android:padding="5dp"/>
+                                <TextView
+                                    android:id="@+id/vaccineDateTV1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="30dp"
+                                    android:text="vaccine date"
+                                    android:textColor="@color/white"
+                                    android:layout_weight="1"
+                                    android:padding="5dp"
+                                    android:textStyle="bold"/>
+                            </TableRow>
+
+                        </TableLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:elevation="0dp"
+                    android:padding="20dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="75dp"
+                    android:layout_centerHorizontal="true">
+
+                    <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+                        android:id="@+id/profileIv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:c_border="true"
+                        app:c_border_color="@color/white"
+                        app:c_border_width="5dp"
+                        android:src="@drawable/ic_person_black" />
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

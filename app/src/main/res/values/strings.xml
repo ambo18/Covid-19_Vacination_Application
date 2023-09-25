@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Vaccination</string>
+    <string name="COVID19">Vaccination App</string>
+    <string name="select">Select Vaccine</string>
+    <string name="select2">Select Vaccine Shot</string>
+    <string name="Sex">Select Sex</string>
+</resources>

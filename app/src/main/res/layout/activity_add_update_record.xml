@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddUpdateRecordActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/saveBtn"
+        android:layout_marginBottom="18dp">
+
+        <RelativeLayout
+            android:id="@+id/reg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:elevation="15dp"
+            android:padding="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="75dp"
+                android:elevation="15dp"
+                app:cardBackgroundColor="@color/dark_blue"
+                app:cardCornerRadius="30dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="50dp"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <EditText
+                        android:id="@+id/nameEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:hint="Name"
+                        android:inputType="textPersonName|textCapWords"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/gray"
+                        android:textSize="15dp" />
+
+                    <EditText
+                        android:id="@+id/phoneEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/nameEt"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:hint="Contact number"
+                        android:inputType="phone"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/gray"
+                        android:textSize="15dp" />
+
+                    <EditText
+                        android:id="@+id/addressEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/phoneEt"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:hint="Address"
+                        android:inputType="text"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/gray"
+                        android:textSize="15dp" />
+
+                    <EditText
+                        android:id="@+id/dobEt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/addressEt"
+                        android:layout_marginStart="15dp"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:hint="Date of Birth"
+                        android:inputType="none"
+                        android:onClick="showDatePickerDialog"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/gray" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/addressEt"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="15dp"
+                        android:onClick="showDatePickerDialog"
+                        android:text="SELECT Date" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/dobEt"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginRight="33dp"
+                        android:text="Age: "
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/gray"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/ageEt"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/dobEt"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="185dp"
+                        android:layout_marginRight="33dp"
+                        android:text=" "
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/gray"
+                        android:textSize="15dp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/categoryEt1"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ageEt"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:hint="@string/Sex"
+                        android:textColorHint="@color/gray">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/categoryEt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none"
+                            android:textColor="@color/white"
+                            android:textColorHighlight="@color/white"
+                            android:textColorLink="@color/white" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <EditText
+                        android:id="@+id/guardianEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/categoryEt1"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:hint="GUARDIAN:  If below 10 yrs old"
+                        android:inputType="text"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/gray"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/vaccineText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/guardianEt"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:text="VACCINE"
+                        android:textColor="@color/purple_500"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/vaccineManEt11"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/vaccineText"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="15dp"
+                        android:hint="@string/select"
+                        android:textColorHint="@color/gray">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/vaccineManEt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none"
+                            android:textColor="@color/white"
+                            android:textColorHighlight="@color/white"
+                            android:textColorLink="@color/white" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/vaccineManEt22"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/vaccineManEt11"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:hint="@string/select2"
+                        android:textColorHint="@color/gray">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/vaccineShotEt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none"
+                            android:textColor="@color/white"
+                            android:textColorHighlight="@color/white"
+                            android:textColorLink="@color/white" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <EditText
+                        android:id="@+id/vaccineDateEt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/vaccineManEt22"
+                        android:layout_marginStart="15dp"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:hint="0000-00-00"
+                        android:inputType="none"
+                        android:onClick="showDatePickerDialog"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/gray" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/vaccineManEt22"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="15dp"
+                        android:onClick="showDatePickerDialog2"
+                        android:text="SELECT Date" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/vaccineManEt33"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/vaccineDateEt"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:hint="@string/select"
+                        android:textColorHint="@color/gray">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/vaccineManEt1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none"
+                            android:textColor="@color/white"
+                            android:textColorHighlight="@color/white"
+                            android:textColorLink="@color/white" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/vaccineManEt44"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/vaccineManEt33"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:hint="@string/select2"
+                        android:textColorHint="@color/gray">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/vaccineShotEt1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none"
+                            android:textColor="@color/white"
+                            android:textColorHighlight="@color/white"
+                            android:textColorLink="@color/white" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <EditText
+                        android:id="@+id/vaccineDateEt1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/vaccineManEt44"
+                        android:layout_marginStart="15dp"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:hint="0000-00-00"
+                        android:inputType="none"
+                        android:onClick="showDatePickerDialog"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/gray" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/vaccineManEt44"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="15dp"
+                        android:onClick="showDatePickerDialog3"
+                        android:text="SELECT Date" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:elevation="0dp"
+                android:padding="20dp"
+                app:cardCornerRadius="75dp">
+
+                <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+                    android:id="@+id/profileIv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:src="@drawable/ic__addphoto_black"
+                    app:c_border="true"
+                    app:c_border_color="@color/white"
+                    app:c_border_width="5dp" />
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/saveBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/teal_200"
+        android:src="@drawable/ic_check_black"
+        app:rippleColor="@color/purple_500" />
+
+</RelativeLayout>
